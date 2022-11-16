@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<!--
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_home"
         android:name="com.catnip.animegogonity.presentation.ui.home.HomeFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:tag="home" />-->
+        android:tag="home" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
