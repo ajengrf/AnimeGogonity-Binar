@@ -5,7 +5,9 @@ import com.catnip.animegogonity.data.network.api.datasource.GogoAnimeApiDataSour
 import com.catnip.animegogonity.data.network.api.service.GogoAnimeApiService
 import com.catnip.animegogonity.data.repository.Repository
 import com.catnip.animegogonity.data.repository.RepositoryImpl
+import com.catnip.animegogonity.presentation.adapter.EpisodesAdapter
 import com.catnip.animegogonity.presentation.adapter.HomeAdapter
+import com.catnip.animegogonity.presentation.ui.detail.AnimeDetailViewModel
 import com.catnip.animegogonity.presentation.ui.home.HomeViewModel
 import com.chuckerteam.chucker.api.ChuckerInterceptor
 import com.google.gson.Gson
@@ -40,10 +42,14 @@ object AppModules {
         viewModel {
             HomeViewModel(get())
         }
+        viewModel {
+            AnimeDetailViewModel(get(), get())
+        }
     }
 
     private val adapter = module {
         factory { HomeAdapter() }
+        factory { EpisodesAdapter() }
     }
 
     // contoh field injection

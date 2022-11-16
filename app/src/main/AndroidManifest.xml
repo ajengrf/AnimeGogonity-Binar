@@ -28,6 +28,11 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
+        <activity
+            android:name=".presentation.ui.detail.AnimeDetailActivity"
+            android:exported="false">
+        </activity>
     </application>
 
 </manifest>

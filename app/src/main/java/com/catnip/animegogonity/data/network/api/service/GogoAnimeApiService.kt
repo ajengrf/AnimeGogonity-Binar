@@ -23,7 +23,7 @@ interface GogoAnimeApiService {
     @GET("recent-release")
     suspend fun getRecentReleaseAnimeList(@Query("page") page: Int = 1): List<Anime>
 
-    @GET("anime-detail/{animeId}")
+    @GET("anime-details/{animeId}")
     suspend fun getAnimeDetail(@Path("animeId") animeId: String): AnimeDetail
 
     companion object {
