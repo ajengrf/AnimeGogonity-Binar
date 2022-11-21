@@ -6,7 +6,7 @@ import com.catnip.animegogonity.data.network.api.datasource.GogoAnimeApiDataSour
 import com.catnip.animegogonity.data.network.api.model.Anime
 import com.catnip.animegogonity.data.network.api.model.AnimeDetail
 
-interface Repository {
+interface AnimeRepository {
     suspend fun getAnimeList(page: Int = 1): Resource<List<Anime>>
 
     suspend fun getTopAiringList(page: Int = 1): Resource<List<Anime>>
@@ -18,7 +18,7 @@ interface Repository {
 }
 
 
-class RepositoryImpl(private val networkDataSource: GogoAnimeApiDataSource) : Repository,
+class AnimeRepositoryImpl(private val networkDataSource: GogoAnimeApiDataSource) : AnimeRepository,
     BaseRepository() {
     override suspend fun getAnimeList(page: Int): Resource<List<Anime>> {
         return doNetworkCall { networkDataSource.getAnimeList(page) }

@@ -5,13 +5,13 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.catnip.animegogonity.R
 import com.catnip.animegogonity.base.wrapper.Resource
-import com.catnip.animegogonity.data.repository.Repository
+import com.catnip.animegogonity.data.repository.AnimeRepository
 import com.catnip.animegogonity.presentation.uimodel.HomeItem
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 // contoh constructor injection
-class HomeViewModel(private val repository: Repository) : ViewModel() {
+class HomeViewModel(private val repository: AnimeRepository) : ViewModel() {
 
     val homeDataResult = MutableLiveData<Resource<List<HomeItem>>>()
 
